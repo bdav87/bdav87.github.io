@@ -1,9 +1,11 @@
 function paperClip() {
-	$(".well p").text("Give me some paper to clip together");
+	$(".well p").text("Developer Skill Assessment");
+	$(".skillArea").toggle(500);
 }
 
 function note() {
 	$(".well p").text("Music to my ears!");
+	$("#musicArea").toggle(500);
 }
 
 function leaf() {
@@ -21,3 +23,7 @@ function bell() {
 function heart() {
 	$(".well p").text("I heart you");
 }
+
+$(function(){
+$('[data-toggle="tooltip"]').tooltip({animation:true});	
+})
