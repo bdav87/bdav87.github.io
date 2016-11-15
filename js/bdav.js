@@ -1,3 +1,4 @@
+//General JS
 function paperClip() {
 	$(".well p").text("Developer Skill Assessment");
 	$(".skillArea").toggle(500);
