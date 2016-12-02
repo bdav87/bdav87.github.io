@@ -48,12 +48,18 @@
 	</div>
 	<h3>JavaScript Play Area</h3>
 	<div class="btn-group">
-	<button type="button" class="btn btn-default" onclick="paperClip()" title="Toggle skill assessment" data-toggle="tooltip"><span class="glyphicon glyphicon-paperclip"></span></button>
-	<button type="button" class="btn btn-primary" onclick="note()" title="Toggle music player" data-toggle="tooltip"><span class="glyphicon glyphicon-music"></span></button>
-	<button type="button" class="btn btn-success" onclick="leaf()"><span class="glyphicon glyphicon-leaf"></span></button>
-	<button type="button" class="btn btn-info" onclick="gear()"><span class="glyphicon glyphicon-cog"></span></button>
-	<button type="button" class="btn btn-warning" onclick="bell()"><span class="	glyphicon glyphicon-bell"></span></button>
-	<button type="button" class="btn btn-danger" onclick="heart()" data-toggle="modal" data-target="#heartModal"><span class="glyphicon glyphicon-heart"></span></button>
+	<button type="button" class="btn btn-default" id="Skills" title="Toggle skill assessment" data-toggle="tooltip"><span class="glyphicon glyphicon-paperclip"></span></button>
+
+	<button type="button" class="btn btn-primary" id="Music" title="Toggle music player" data-toggle="tooltip"><span class="glyphicon glyphicon-music"></span></button>
+
+	<button type="button" class="btn btn-success" id="Leaf"><span class="glyphicon glyphicon-leaf"></span></button>
+
+	<button type="button" class="btn btn-info" id="Cog"><span class="glyphicon glyphicon-cog"></span></button>
+
+	<button type="button" class="btn btn-warning" id="Bell"><span class="	glyphicon glyphicon-bell"></span></button>
+
+	<button type="button" class="btn btn-danger" id="Heart" data-toggle="modal" data-target="#heartModal"><span class="glyphicon glyphicon-heart"></span></button>
+
 	</div>
 
 	<div id="heartModal" class="modal fade" role="dialog">
