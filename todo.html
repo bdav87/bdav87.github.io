@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+p,
+a,
+li,
+h1{
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+li > a {
+  font-size: 14px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 1.5em;
+}
+
+body {
+  margin: 0;
+  background: #eaeaea;
+}
+
+.task {
+  background: #333333;
+  display: block;
+  margin: 10px auto;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  list-style: none;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+
+.task:hover {}
+
+.task:active {
+  box-shadow: 0px 0px 0px rgb(0,0,0);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.active {
+  background: #2dc339;
+}
+
+form {
+  margin: 10px;
+}
+
+#container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #3c8ba2;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+  min-height: 90vh;
+}
+
+#removeItems {
+  float: right;
+  background: rgba(191, 68, 214, 0.2);
+}
+
+#addItem {
+  text-align: left;
+  text-indent: 5px;
+}
+
+#addItemBtn {
+  background: rgba(191, 68, 214, 0.3);
+}
+
+#msg {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 25px 0;
+}
+
+input {
+  border-radius: 5px;
+  border:none;
+  line-height: 2;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+
+input:focus {
+  outline:none;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+</style>
+
+
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="page-header">
+    <h1 class="text-center">Bootstrap and Git <br><small>An Exercise in Front End Development</small></h1>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Home</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span>&nbsp;Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="todo.html">Todo List</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;About</a></li>
+        <!--<li><a href="#">Contact me</a></li>-->
+      </ul>
+    </div>
+
+
+  </nav>
+
+<div id="container">
+  <h1>To Do List</h1>
+  <form id="addItemForm">
+    <input id="addItem" type="text" placeholder="Add an item" />
+    <input id="addItemBtn" type="submit" value="Add Item" />
+    <input id="removeItems" type="button" value="Remove selected items" />
+  </form>
+  <div>
+    <p id="msg">0 item(s) selected</p>
+  </div>
+  <ul id="todoList">
+    <li class="task">Cook steak</li>
+    <li class="task">Walk the dog</li>
+    <li class="task">Lift weights</li>
+    <li class="task">Code</li>
+  </ul>
+</div>
+
+<script>
+var msgCount = 0;
+
+function displayCount() {
+  $("#msg").text(msgCount + " item(s) selected");
+}
+
+function getTarget(e) {
+  return e.target;
+}
+
+function itemDone(e) {
+  var target = getTarget(e);
+  e.preventDefault();
+
+  if (target.parentElement.nodeName == "UL") {
+    $(target).toggleClass("active");
+    msgCount = $(".task.active").length;
+    displayCount();
+  }
+
+}
+$("#todoList").on('click', function(e) {
+  itemDone(e);
+});
+
+$("#addItemForm").submit(function(e) {
+  e.preventDefault();
+  var item = $("#addItem").val();
+  var itemFilter = document.createTextNode(item);
+
+  if (item.length < 1) {
+    $("#msg").text("Please enter an item");
+    return;
+  } else {
+    $("#todoList").append("<li class='task'></li>");
+    $(".task:last").prepend(itemFilter);
+    $("#msg").text(item + " was added to your list");
+    $("#addItem").val("");
+
+  }
+});
+
+$("#removeItems").click(function() {
+  $(".task.active").remove();
+  msgCount = 0;
+  displayCount();
+});
+
+$("input").on("mouseup", function(){
+  $(this).css("box-shadow", "0px 1px 2px rgba(0,0,0,0.5)");
+
+});
+
+$("input").on("mousedown", function(){
+  $(this).css("box-shadow", "none");
+
+});
+</script>
+</body>
+</html>
