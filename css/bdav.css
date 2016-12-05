@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+header {
+	font-family: 'Merriweather', sans-serif;
+	text-align: left;
+	text-indent: 15px;
+}
+
+body {
+	background: #f3f3f3; 
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+
+.container {
+	background: rgba(162, 162, 162, 0.22);
+	max-width: 1280px;
+	margin: 10px auto;
+	padding: 1px 0;
+	border-radius: 5px;
+}
+
+.card {
+	margin: 1.1%;
+	padding: 1.1%;
+	display: block;
+	position: relative;
+	vertical-align: top;
+	border-radius: 2px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+	background: #FFF;
+}
+
+.tall {
+	max-width: 32%;
+	margin: 1.1% 0.5% 1.1% 1.1%;
+	display: inline-block;
+}
+
+.wide {
+	max-width: 64.4%;
+	margin: 1.1% 1.1% 1.1% 0.5%;
+	display: inline-block;
+}
+
+.square {
+	display: inline-block;
+	max-width: 30.9%;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1,1);
+	}
+
+	50% {
+		transform: scale(1.01,1.01);
+	}
+
+	100% {
+		transform: scale(1,1);
+	}
+
+}
+
+.card img:hover {
+	animation: pulse 2s infinite;
+}
+
+.zoomed {
+	position: fixed;
+	z-index: 1;
+	text-align:center;
+	max-width: 90%; 
+	overflow: auto;
+	top: 0;
+	left: 0;
+}
+
+.zoomed:hover {
+	animation: none !important;
+}
+
+@media only screen and (max-width: 990px) {
+	.card {
+		max-width: 98%;
+		margin: 1% 1% .5%;
+		padding: 1%;
+	}
+}
+
+.modalz {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-contentz {
+    margin: auto;
+    display: block;
+    max-width: 90vw;
+    max-height: 80vh;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    font-family: "Merriweather", sans-serif;
+    font-size: 16px;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-contentz, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.7s;
+    animation-name: zoom;
+    animation-duration: 0.7s;
+}
+
+.modal-contentz, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.7s;
+    animation-name: zoom;
+    animation-duration: 0.7s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0.2)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.2)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closer {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.closer:hover,
+.closer:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

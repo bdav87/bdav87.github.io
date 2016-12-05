@@ -31,6 +31,28 @@ $("#Heart").on("click", function() {
 
 $('[data-toggle="tooltip"]').tooltip({animation:true});	
 
+$(".card img").on("click", function(){
+	var imageZoom = this.src;
+	$("#caption").text($(this).attr("alt"));
+	$("#img01").attr("src", imageZoom);
+	$("#myModalz").css("display", "block");
+
+})
+
+$(".closer").on("click", function(){
+	$(".modalz").hide();
+})
+
+$(".modalz").on("click", function(){
+	$(this).hide();
+})
+
+$(document).on("keyup", function(e){
+	if (e.keyCode == 27) {
+		$(".modalz").hide();
+	}
+})
+
 
 
 //End of document ready function
