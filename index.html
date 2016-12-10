@@ -3,11 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- jQuery library -->
+	<link rel="stylesheet" href="css/bdav.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/bdav.js"></script>
 </head>
@@ -42,6 +40,8 @@
 	</nav>
 
 <div class="container-fluid col-md-10 col-lg-8" style="float:none">
+	<div class="row">
+		<div class="col-md-8">
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 			<h3>A concept page built with Bootstrap</h3>
@@ -52,6 +52,8 @@
 			<p>I'm excited to work with these tools and build up my development foundation. It's certainly a step up from building projects in pens and fiddles!</p>
 		</div>
 	</div>
+</div>
+<div class="col-md-4">
 	<h3>JavaScript Play Area</h3>
 	<div class="btn-group">
 	<button type="button" class="btn btn-default" id="Skills" title="Toggle skill assessment" data-toggle="tooltip"><span class="glyphicon glyphicon-paperclip"></span></button>
@@ -67,6 +69,13 @@
 	<button type="button" class="btn btn-danger" id="Heart" data-toggle="modal" data-target="#heartModal"><span class="glyphicon glyphicon-heart"></span></button>
 
 	</div>
+
+	<div class="well">
+	<p>Press a button</p>
+	</div>
+
+</div>
+</div>
 
 	<div id="heartModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
@@ -85,9 +94,7 @@
 		</div>
 	</div>
 
-	<div class="well">
-	<p>Press a button</p>
-	</div>
+	
 	<h3 class="skillArea" style="display:none">Self Assessment On A Scale From 1 - 10</h3>
 	<div class="row skillArea" style="display:none;">
 		<div class="col-md-4">
@@ -128,9 +135,16 @@
 		<div class="col-md-6">
 			<h3>Goals</h3>
 			<ul class="list-group">
-				<li class="list-group-item">Become exceptional at JavaScript development</li>
-				<li class="list-group-item">Release a professionally mastered album</li>
-				<li class="list-group-item">Write a story</li>
+				<li class="list-group-item">
+					<div class="separator">
+					<span class="glyphicon glyphicon-chevron-left" width="15px"></span><span class="glyphicon glyphicon-chevron-right"></span>
+				</div>Become exceptional at JavaScript development</li>
+				<li class="list-group-item">
+					<div class="separator">
+					<span class="glyphicon glyphicon-cd"></span></div>Release a professionally mastered album</li>
+				<li class="list-group-item">
+					<div class="separator">
+					<span class="glyphicon glyphicon-book"></span></div>Write a novel</li>
 			</ul>
 		</div>
 	</div>
