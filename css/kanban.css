@@ -1,0 +1,242 @@
+/*CSS*/
+body {
+	margin: 0;
+	font-family: "Quicksand", sans-serif;
+	background:  #eaf9ff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: static;
+}
+
+header {
+	/*background: #2b2b2b;*/
+	margin: 0 auto;
+	height: auto;
+	max-width: 1280px;
+	background: rgba(18, 18, 19, 0.55);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+	user-select:none;
+
+}
+
+h1 {
+	margin: 8px;
+	color: #1cd3ff;
+	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.66);
+	cursor: pointer;
+  /*background: rgba(105, 105, 105, 0.6);*/
+}
+
+h3 {
+	margin: 16px 0;
+	color: #dedede;
+}
+
+p {
+	margin: 0;
+}
+
+nav {
+	max-width: 1280px;
+	margin: 15px auto;
+}
+
+input[type=text] {
+	font-size: 24px;
+	float: left;
+	border-radius: 5px;
+	border:none;
+	height: 30px;
+	text-indent: 3px;
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+	background: rgba(255, 255, 255, 0.8);
+	padding: 0;
+	margin: 0 5px;
+	height: 32px;
+}
+
+button:hover {
+	background: rgba(255, 255, 255, 0.99);
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.innerContainer {
+	/*background: #2f2f2f;*/
+	padding: 0 5px;
+	margin-top: 15px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.btnContainer {
+	display: flex;
+	align-content: center;
+	margin: 8px 0;
+	padding: 4px 8px;
+}
+
+.kanbanCol {
+	width: 33.33%;
+	margin: 5px;
+	min-height: 200px;
+	text-align: center;
+	/*background: #333;*/
+	background: rgba(0, 0, 0, 0.85);
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+}
+
+.kanbanInnerCol {
+	display: flex;
+	flex-direction: column;
+	background: rgba(255, 255, 255, 0.2);
+	min-height: 320px;
+	width: 98%;
+	margin: 0 auto 5px;
+	border-radius: 5px;
+}
+
+.colMenu {
+	background: #333333;
+	font-size: 16px;
+	height: 64px;
+	width: 98%;
+	margin: 5px auto;
+	border-radius: 5px;
+	text-align: left;
+	cursor: pointer;
+}
+
+.colMenu p {
+	margin: 11px;
+	color: #d8d8d8;
+	font-size: 32px;
+
+}
+
+.material-icons.add {
+	/*float:left;*/
+	font-size: 32px;
+	color: #16a3c5;
+
+}
+
+.menuSeparator {
+	height: 32px;
+	/*border-bottom: 1px solid rgba(78, 77, 77, 0.39);*/
+  background:rgb(23, 70, 156);
+	border-radius: 5px 5px 0 0;
+}
+
+.note {
+	background: #FFF;
+	min-height: 72px;
+	margin: 15px;
+	border-radius: 10px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+	cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.note:active {
+	  cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    box-shadow: 0 1px 5px rgba(0,0,0,1);
+    background: #d0d0d0;
+}
+
+
+.notePlaceholder {
+	height: 72px;
+	margin: 15px;
+	background: rgba(29, 29, 29, 0.5);
+	border-radius: 5px;
+}
+
+.note p {
+	margin: 5px 0;
+}
+
+.newCardArea {
+	margin: 5px;
+}
+
+.newCardArea textarea {
+	resize: none;
+	border-radius: 5px;
+}
+
+#newCardInput {
+	background: rgba(0, 0, 0, 0.27);
+	color: white;
+	font-size: 18px;
+	font-family: "Quicksand", sans-serif;
+	display:block;
+	width: 50%;
+	text-indent: 5px;
+	border: none;
+	margin: 18px 0;
+}
+
+#noteSubmit {
+	background: #3cb15b;
+	border-radius:5px;
+	padding: 10px 20px;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+#noteCancel{
+	background: red;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+}
+
+#noteCancel:hover {
+	background: orange;
+}
+
+#noteSubmit:hover {
+	background: #33984e;
+}
+
+.close {
+    float: right;
+    display: block;
+		position: static;
+    padding: 0;
+    background:none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+		box-shadow: none;
+		width: 32px;
+		height: 32px;
+		border-radius: 0 5px 0 0;
+		margin: 0;
+}
+
+.close:hover {
+	color: gray;
+}
+
+/*.kanbanCol .material-icons {
+	padding: 0 0 0 40px;
+
+}*/
