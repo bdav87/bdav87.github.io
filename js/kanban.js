@@ -13,7 +13,7 @@ $(this).parent().parent().fadeOut(250, function(){
 }
 
 //Note prototype
-var note = function(content, name){
+var Note = function(content, name){
 	this.content = content || 'Empty Note',
 	this.name = name || 'New Note',
 	this.display = function(){
@@ -24,7 +24,7 @@ var note = function(content, name){
 };
 
 //Column prototype
-var column = function(name){
+var Column = function(name){
 	this.name = name || 'New Column',
 	this.body = "<div class='kanbanCol'><div class='menuSeparator'><button class='close'><i class='material-icons'>close</i></button></div><h3>" +
 		this.name +
@@ -37,7 +37,7 @@ All the column things go here
 */
 
 function createNewColumn(){
-	var newColumn = new column($("#colInput").val());
+	var newColumn = new Column($("#colInput").val());
 	$(".innerContainer").append(newColumn.body);
 
 	//Reset user input field
@@ -78,7 +78,7 @@ function createNewNote(){
 
 	//New note gets content from the user input field
 	//The jQuery object is passed as a parameter
-	var newNote = new note($("#noteInput").val());
+	var newNote = new Note($("#noteInput").val());
 
 	//The input field is cleared
 	$('#noteInput').val('');
