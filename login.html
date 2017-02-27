@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Example Login UI-->
+<!--Stylesheets-->
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+<title>Category Manager</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+label {
+  display: block;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EDFEFF;
+  min-height: 100vh;
+}
+
+.loginModal {
+
+  min-width: 680px;
+  min-height: 480px;
+  background: #3E84FF;
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.loginModal input[type=text] {
+  display:block;
+  font-size: 24px;
+  height: 40px;
+  min-width: 360px;
+  margin: 24px 0;
+  padding: 0;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  border: none;
+  text-indent: 8px;
+}
+
+.loginModal input[type=submit] {
+  display:block;
+  border: none;
+  background: #333;
+  color: white;
+  /*border-radius: 8px;*/
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 40px auto;
+  font-size: 24px;
+  width: 160px;
+
+}
+
+.modalHeader {
+  background: #212627;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  padding: 16px 0;
+  margin: 0 0 16px 0;
+}
+
+.modalHeader h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.modalBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.modalAlert {
+  padding: 32px 0;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="loginModal">
+    <div class="modalHeader">
+      <h1>Login</h1>
+    </div>
+    <div class="modalAlert">Please enter your credentials</div>
+    <div class="modalBody">
+    <form id='authForm'>
+    <label for="un">Username</label>
+    <input type='text' id='un'>
+    <label for "token">Token</label>
+    <input type='text' id='token'>
+    <input type='submit' value='Submit'>
+    </form>
+  </div>
+
+  </div>
+</div>
+</body>
+</html>
