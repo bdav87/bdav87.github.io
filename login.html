@@ -6,25 +6,27 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 <title>Category Manager</title>
 <style>
 body {
   margin: 0;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 label {
   display: block;
   text-align: center;
-  color: white;
+  color: #34313f;
+  font-weight: 600;
   margin: 0 auto;
 }
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #EDFEFF;
+  background: #f9ffff;
   min-height: 100vh;
 }
 
@@ -32,7 +34,7 @@ label {
 
   min-width: 680px;
   min-height: 480px;
-  background: #3E84FF;
+  background: #FFF;
   border-radius: 8px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
 }
@@ -44,28 +46,40 @@ label {
   min-width: 360px;
   margin: 24px 0;
   padding: 0;
-  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  border: none;
+  /*box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);*/
+  border-radius: 2px;
+  border: solid 1px rgb(215, 214, 217);
   text-indent: 8px;
 }
 
+.loginModal input[type=text]:hover {
+  border-color: rgb(134, 132, 140);
+}
+
+.loginModal input[type=text]:focus, .loginModal input[type=text]:active {
+  outline: none;
+  border-color: rgb(75, 113, 252);
+}
+
+
+
 .loginModal input[type=submit] {
   display:block;
-  border: none;
-  background: #333;
-  color: white;
-  /*border-radius: 8px;*/
-  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #4b71fc;
+  color: #4b71fc;
+  background: #FFF;
+  border-radius: 2px;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   margin: 40px auto;
-  font-size: 24px;
-  width: 160px;
+  font-size: 1rem;
+  font-weight: 400;
+  /*width: 160px;*/
 
 }
 
 .modalHeader {
-  background: #212627;
+  background: #4b71fc;
   border-radius: 8px 8px 0 0;
   color: white;
   padding: 16px 0;
@@ -75,6 +89,7 @@ label {
 .modalHeader h1 {
   margin: 0;
   text-align: center;
+  font-weight: 300;
 }
 
 .modalBody{
